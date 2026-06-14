@@ -1,0 +1,325 @@
+@charset "utf-8";
+
+/* 共通デザイン */
+/* ページのスクロール移動をスムーズに */
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:target {
+  padding-top: 64px;
+}
+
+/* body全体にフォント指定と背景色 */
+body {
+  font-family: sans-serif;
+  background-color: #fff1cf;
+  margin: 0;
+  padding: 0;
+}
+
+/* h2とh3の文字デザインを指定 */
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #6f4c5b;
+}
+
+h3 {
+  font-size: 23px;
+  font-weight: bold;
+  color:#6f4c5b;
+}
+header {
+  width: 960px;
+  margin: 32px auto 32px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header img {
+  width: 630px;
+}
+
+.site_reserve {
+  width: 320px;
+  text-align: right;
+}
+
+/* メインの指定 */
+main {
+  max-width: 960px;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* メインのナビゲーションバーを指定 */
+nav {
+  background-color: #6f4c5b;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 8px auto 8px auto;
+  list-style: none;
+}
+
+nav li {
+  width: 96px;
+  margin: 8px;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+/* メインのイベント画像の指定 */
+#main-event img {
+  width: 280px;
+  margin: 8px;
+}
+
+
+
+/* テーマロゴの画像のスタイル指定 */
+.theme_logo {
+  margin: 0 auto 0 auto;
+}
+
+
+/* メインのお知らせの指定 */
+#main-news {
+  margin: 80px auto 80px auto;
+}
+#main-news h3 {
+  margin: 32px auto 4px auto;
+}
+.x_news {
+  margin: 0 auto 0 auto;
+  width: 500px;
+  text-align: center;
+}
+
+/* メインのコンセプトの指定 */
+#main-concept {
+  margin: 80px auto 80px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#main-concept img {
+  margin: 50px 0px 0px 0px;
+  text-align: center;
+}
+
+#main-concept h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.concept_category {
+  width: 50%;
+  margin: 8px auto 8px auto;
+}
+
+.concept_category img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 32px;
+}
+.concept_category p {
+  margin: 10px auto 10px auto;
+  padding: 32px;
+  max-width: 320px;
+  width: 100%;
+  line-height: 32px;
+  font-size: 18px;
+  background-color: #fff0f5;
+  border: dashed 2px #773d50;
+  color: #6f4c5b;
+}
+
+
+/* メインのメニューの指定 */
+#main-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#main-menu img {
+  margin: 0 auto 0 auto;
+}
+
+#main-menu h2 {
+  width: 100%;
+}
+
+.menu_category {
+  width: 50%;
+  margin: 0 auto 32px auto;
+}
+
+.menu_category img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+}
+
+.menu_category ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+#takeout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#takeout img {
+  margin: 0 auto 0 auto;
+}
+
+#takeout h2 {
+  width: 100%;
+}
+
+.takeout_category {
+  width: 50%;
+  margin: 0 auto 32px auto;
+}
+
+.takeout_category img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+}
+
+.takeout_category ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* スマートフォン・タブレット用レイアウト (幅960px以下) */
+@media screen and (max-width: 960px) {
+  /* 全体の余白調整 */
+  main {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  /* ヘッダーの調整 */
+  header {
+    width: 100%;
+    margin: 16px auto;
+    padding: 0 16px;
+  }
+  header img {
+    max-width: 100%;
+    width: auto;
+    display: block;
+    margin: 0 auto 16px auto;
+  }
+  .site_reserve {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ナビゲーションメニューの調整 */
+  nav ul {
+    justify-content: center;
+    padding: 0;
+    margin: 4px auto;
+  }
+  nav li {
+    width: auto;
+    flex: 1 1 70px;
+    margin: 4px;
+    font-size: 14px;
+  }
+
+  /* イベント画像の調整 */
+  #main-event img {
+    width: 90%;
+    max-width: 320px;
+    margin: 8px auto;
+    display: block;
+  }
+
+  /* テーマロゴ */
+  .theme_logo img {
+    width: 100%;
+  }
+
+  /* お知らせ */
+  .x_news {
+    width: 100%;
+  }
+  .calendar_news {
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .calendar_news iframe {
+    width: 100%;
+    height: 350px;
+  }
+
+  /* コンセプト */
+  .concept_category {
+    width: 100%;
+    padding: 0;
+  }
+  .concept_category p {
+    margin: 16px auto 32px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* メニュー */
+  .menu_category {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* テイクアウト */
+  .takeout_category {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* アクセス・マップ */
+  .access_map {
+    width: 100%;
+  }
+  .access_map iframe {
+    height: 300px;
+  }
+}
+
+.logo{
+ width: 100%; 
+}
